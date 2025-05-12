@@ -42,7 +42,7 @@
       href="https://electron-vite.org/"
       target="_blank"
       rel="noreferrer"
-      class="cursor-pointer no-underline inline-block border border-transparent text-center font-semibold whitespace-nowrap rounded-[20px] px-5 py-0 leading-[38px] text-sm border-[var(--ev-button-alt-border)] text-[var(--ev-button-alt-text)] bg-[var(--ev-button-alt-bg)] hover:border-[var(--ev-button-alt-hover-border)] hover:text-[var(--ev-button-alt-hover-text)] hover:bg-[var(--ev-button-alt-hover-bg)]"
+      class="cursor-pointer no-underline inline-block border text-center font-semibold whitespace-nowrap rounded-[20px] px-5 py-0 leading-[38px] text-sm border-[var(--ev-button-alt-border)] text-[var(--ev-button-alt-text)] bg-[var(--ev-button-alt-bg)] hover:border-[var(--ev-button-alt-hover-border)] hover:text-[var(--ev-button-alt-hover-text)] hover:bg-[var(--ev-button-alt-hover-bg)]"
       >Documentation</a
     >
   </div>
@@ -52,7 +52,7 @@
       target="_blank"
       rel="noreferrer"
       on:click={ipcHandle}
-      class="cursor-pointer no-underline inline-block border border-transparent text-center font-semibold whitespace-nowrap rounded-[20px] px-5 py-0 leading-[38px] text-sm border-[var(--ev-button-alt-border)] text-[var(--ev-button-alt-text)] bg-[var(--ev-button-alt-bg)] hover:border-[var(--ev-button-alt-hover-border)] hover:text-[var(--ev-button-alt-hover-text)] hover:bg-[var(--ev-button-alt-hover-bg)]"
+      class="cursor-pointer no-underline inline-block border text-center font-semibold whitespace-nowrap rounded-[20px] px-5 py-0 leading-[38px] text-sm border-[var(--ev-button-alt-border)] text-[var(--ev-button-alt-text)] bg-[var(--ev-button-alt-bg)] hover:border-[var(--ev-button-alt-hover-border)] hover:text-[var(--ev-button-alt-hover-text)] hover:bg-[var(--ev-button-alt-hover-bg)]"
       >Send IPC</a
     >
   </div>
