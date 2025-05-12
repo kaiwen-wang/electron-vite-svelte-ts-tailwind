@@ -1,6 +1,6 @@
-# my-app
+# electron-vite-svelte-ts-tailwind
 
-An Electron application with Svelte and TypeScript
+An Electron application with Svelte and TypeScript and Tailwind
 
 ## Recommended IDE Setup
 
