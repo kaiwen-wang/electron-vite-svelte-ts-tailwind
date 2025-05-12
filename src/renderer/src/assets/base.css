@@ -1,36 +1,44 @@
-:root {
-  --ev-c-white: #ffffff;
-  --ev-c-white-soft: #f8f8f8;
-  --ev-c-white-mute: #f2f2f2;
+@import "tailwindcss";
 
-  --ev-c-black: #1b1b1f;
-  --ev-c-black-soft: #222222;
-  --ev-c-black-mute: #282828;
-
-  --ev-c-gray-1: #515c67;
-  --ev-c-gray-2: #414853;
-  --ev-c-gray-3: #32363f;
-
-  --ev-c-text-1: rgba(255, 255, 245, 0.86);
-  --ev-c-text-2: rgba(235, 235, 245, 0.6);
-  --ev-c-text-3: rgba(235, 235, 245, 0.38);
-
-  --ev-button-alt-border: transparent;
-  --ev-button-alt-text: var(--ev-c-text-1);
-  --ev-button-alt-bg: var(--ev-c-gray-3);
-  --ev-button-alt-hover-border: transparent;
-  --ev-button-alt-hover-text: var(--ev-c-text-1);
-  --ev-button-alt-hover-bg: var(--ev-c-gray-2);
+@theme {
+  /* Electron-vite colors */
+  --color-white: #ffffff;
+  --color-black: #1b1b1f;
+  
+  /* Custom colors for electron-vite UI */
+  --color-ev-white-soft: #f8f8f8;
+  --color-ev-white-mute: #f2f2f2;
+  --color-ev-black-soft: #222222;
+  --color-ev-black-mute: #282828;
+  --color-ev-gray-1: #515c67;
+  --color-ev-gray-2: #414853;
+  --color-ev-gray-3: #32363f;
+  
+  /* Text colors */
+  --color-ev-text-1: rgba(255, 255, 245, 0.86);
+  --color-ev-text-2: rgba(235, 235, 245, 0.6);
+  --color-ev-text-3: rgba(235, 235, 245, 0.38);
+  
+  /* Button colors */
+  --color-ev-button-alt-border: transparent;
+  --color-ev-button-alt-text: var(--color-ev-text-1);
+  --color-ev-button-alt-bg: var(--color-ev-gray-3);
+  --color-ev-button-alt-hover-border: transparent;
+  --color-ev-button-alt-hover-text: var(--color-ev-text-1);
+  --color-ev-button-alt-hover-bg: var(--color-ev-gray-2);
+  
+  /* Background colors */
+  --color-ev-background: var(--color-black);
+  --color-ev-background-soft: var(--color-ev-black-soft);
+  --color-ev-background-mute: var(--color-ev-black-mute);
+  
+  /* Font family */
+  --font-inter: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  --font-sans: var(--font-inter);
+  --font-mono: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
 }
 
-:root {
-  --color-background: var(--ev-c-black);
-  --color-background-soft: var(--ev-c-black-soft);
-  --color-background-mute: var(--ev-c-black-mute);
-
-  --color-text: var(--ev-c-text-1);
-}
-
+/* Base styles */
 *,
 *::before,
 *::after {
@@ -45,23 +53,65 @@ ul {
 
 body {
   min-height: 100vh;
-  color: var(--color-text);
-  background: var(--color-background);
+  color: var(--color-ev-text-1);
+  background: var(--color-ev-background);
   line-height: 1.6;
-  font-family:
-    Inter,
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    Oxygen,
-    Ubuntu,
-    Cantarell,
-    'Fira Sans',
-    'Droid Sans',
-    'Helvetica Neue',
-    sans-serif;
+  font-family: var(--font-sans);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
+  /* Added from main.css */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-image: url('./wavy-lines.svg');
+  background-size: cover;
+  user-select: none;
+}
+
+/* Code element styles from main.css */
+code {
+  font-weight: 600;
+  padding: 3px 5px;
+  border-radius: 2px;
+  background-color: var(--color-background-mute);
+  font-family: var(--font-mono);
+  font-size: 85%;
+}
+
+/* App container styles from main.css */
+#app {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 80px;
+}
+
+/* For backward compatibility */
+:root {
+  --ev-c-white: var(--color-white);
+  --ev-c-white-soft: var(--color-ev-white-soft);
+  --ev-c-white-mute: var(--color-ev-white-mute);
+  --ev-c-black: var(--color-black);
+  --ev-c-black-soft: var(--color-ev-black-soft);
+  --ev-c-black-mute: var(--color-ev-black-mute);
+  --ev-c-gray-1: var(--color-ev-gray-1);
+  --ev-c-gray-2: var(--color-ev-gray-2);
+  --ev-c-gray-3: var(--color-ev-gray-3);
+  --ev-c-text-1: var(--color-ev-text-1);
+  --ev-c-text-2: var(--color-ev-text-2);
+  --ev-c-text-3: var(--color-ev-text-3);
+  --ev-button-alt-border: var(--color-ev-button-alt-border);
+  --ev-button-alt-text: var(--color-ev-button-alt-text);
+  --ev-button-alt-bg: var(--color-ev-button-alt-bg);
+  --ev-button-alt-hover-border: var(--color-ev-button-alt-hover-border);
+  --ev-button-alt-hover-text: var(--color-ev-button-alt-hover-text);
+  --ev-button-alt-hover-bg: var(--color-ev-button-alt-hover-bg);
+  --color-background: var(--color-ev-background);
+  --color-background-soft: var(--color-ev-background-soft);
+  --color-background-mute: var(--color-ev-background-mute);
+  --color-text: var(--color-ev-text-1);
 }
