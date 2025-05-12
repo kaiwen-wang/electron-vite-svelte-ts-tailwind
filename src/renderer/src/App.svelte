@@ -20,11 +20,14 @@
   <span
     class="bg-gradient-to-br from-[#ff3e00] from-35% to-[#647eff] bg-clip-text text-transparent font-bold"
     >Svelte</span
-  >
-  and
+  >,
   <span
     class="bg-gradient-to-br from-[#3178c6] from-45% to-[#f0dc4e] bg-clip-text text-transparent font-bold"
     >TypeScript</span
+  >, and
+  <span
+    class="bg-gradient-to-br from-[#06b6d4] from-40% to-[#a855f7] bg-clip-text text-transparent font-bold"
+    >Tailwind CSS</span
   >
 </div>
 <p class="text-base leading-6 text-[var(--ev-c-text-2)] font-semibold">
